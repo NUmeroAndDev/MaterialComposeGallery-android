@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
@@ -19,12 +20,15 @@ fun ComponentItem(
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
             text = label,
             style = MaterialTheme.typography.h6,
-            modifier = Modifier.padding(labelPadding)
+            modifier = Modifier
+                .padding(labelPadding)
+                .align(Alignment.Start)
         )
         content()
     }
