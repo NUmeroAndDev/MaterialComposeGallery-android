@@ -24,6 +24,7 @@ import jp.numero.material_compose_gallery.feature.m2overview.items.bottomAppBarI
 import jp.numero.material_compose_gallery.feature.m2overview.items.bottomNavigationItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.buttonsItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.cardItem
+import jp.numero.material_compose_gallery.feature.m2overview.items.chipsItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.topAppBarItem
 
 @Composable
@@ -82,6 +83,7 @@ private fun Material2OverviewContent(
         bottomNavigationItem()
         buttonsItem()
         cardItem()
+        chipsItem()
         topAppBarItem()
         bottomAppBarItem()
     }
