@@ -1,5 +1,7 @@
 package jp.numero.material_compose_gallery.feature.m2overview
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,6 +19,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import jp.numero.material_compose_gallery.feature.m2overview.items.topAppBarItem
 
 @Composable
 fun Material2Overview(
@@ -67,8 +71,10 @@ private fun Material2OverviewContent(
     modifier: Modifier = Modifier,
 ) {
     LazyColumn(
-        modifier = modifier
+        modifier = modifier,
+        verticalArrangement = Arrangement.spacedBy(32.dp),
+        contentPadding = PaddingValues(vertical = 16.dp)
     ) {
-        // TODO
+        topAppBarItem()
     }
 }
