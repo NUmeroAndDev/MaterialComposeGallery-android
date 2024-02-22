@@ -79,7 +79,7 @@ private fun Material2OverviewContent(
 ) {
     LazyColumn(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(32.dp),
+        verticalArrangement = Arrangement.spacedBy(42.dp),
         contentPadding = WindowInsets
             .safeDrawing
             .only(WindowInsetsSides.Bottom)
