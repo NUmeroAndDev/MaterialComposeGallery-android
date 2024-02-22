@@ -21,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import jp.numero.material_compose_gallery.feature.m2overview.items.bottomAppBarItem
+import jp.numero.material_compose_gallery.feature.m2overview.items.bottomNavigationItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.topAppBarItem
 
 @Composable
@@ -76,6 +77,7 @@ private fun Material2OverviewContent(
         verticalArrangement = Arrangement.spacedBy(32.dp),
         contentPadding = PaddingValues(vertical = 16.dp)
     ) {
+        bottomNavigationItem()
         topAppBarItem()
         bottomAppBarItem()
     }
