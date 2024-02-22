@@ -12,8 +12,11 @@ fun NavController.navigateToHome(navOptions: NavOptions? = null) {
 }
 
 fun NavGraphBuilder.homeScreen(
+    navigateToM2Overview: () -> Unit,
 ) {
     composable(route = homeRoute) {
-        Home()
+        Home(
+            navigateToM2Overview = navigateToM2Overview
+        )
     }
 }

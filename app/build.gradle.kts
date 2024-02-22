@@ -54,9 +54,11 @@ dependencies {
     implementation(projects.data)
     implementation(projects.dataImpl)
     implementation(projects.feature.home)
+    implementation(projects.feature.m2overview)
 
     implementation(libs.androidxActivity)
     implementation(libs.androidxCore)
     implementation(libs.androidxCoreSplash)
+    implementation(libs.androidxComposeMaterial3)
     implementation(libs.androidxProfileInstaller)
 }

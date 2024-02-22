@@ -7,5 +7,5 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidxComposeMaterial3)
+    implementation(libs.androidxComposeMaterial)
 }

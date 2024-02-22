@@ -6,6 +6,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import jp.numero.material_compose_gallery.feature.home.homeRoute
 import jp.numero.material_compose_gallery.feature.home.homeScreen
+import jp.numero.material_compose_gallery.feature.m2overview.m2OverviewScreen
+import jp.numero.material_compose_gallery.feature.m2overview.navigateToM2Overview
 
 @Composable
 fun TemplateAppNavigation(
@@ -16,6 +18,15 @@ fun TemplateAppNavigation(
         navController = navController,
         startDestination = homeRoute,
     ) {
-        homeScreen()
+        homeScreen(
+            navigateToM2Overview = {
+                navController.navigateToM2Overview()
+            }
+        )
+        m2OverviewScreen(
+            onBack = {
+                navController.navigateUp()
+            }
+        )
     }
 }
