@@ -29,6 +29,7 @@ import jp.numero.material_compose_gallery.feature.m2overview.items.checkboxItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.chipsItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.dividerItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.progressIndicatorItem
+import jp.numero.material_compose_gallery.feature.m2overview.items.sliderItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.switchItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.topAppBarItem
 
@@ -96,6 +97,7 @@ private fun Material2OverviewContent(
         chipsItem()
         dividerItem()
         progressIndicatorItem()
+        sliderItem()
         switchItem()
         topAppBarItem()
         bottomAppBarItem()
