@@ -1,9 +1,10 @@
 package jp.numero.material_compose_gallery.feature.m2overview
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.add
+import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
@@ -78,7 +79,11 @@ private fun Material2OverviewContent(
     LazyColumn(
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(32.dp),
-        contentPadding = PaddingValues(vertical = 16.dp)
+        contentPadding = WindowInsets
+            .safeDrawing
+            .only(WindowInsetsSides.Bottom)
+            .add(WindowInsets(top = 16.dp, bottom = 16.dp))
+            .asPaddingValues()
     ) {
         bottomNavigationItem()
         buttonsItem()
