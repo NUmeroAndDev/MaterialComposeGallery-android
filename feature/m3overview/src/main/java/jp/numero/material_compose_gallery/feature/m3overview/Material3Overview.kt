@@ -28,6 +28,8 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -86,7 +88,8 @@ private fun Material3Overview(
                     }
                 },
                 windowInsets = WindowInsets.safeDrawing.only(WindowInsetsSides.Top),
-                scrollBehavior = scrollBehavior
+                scrollBehavior = scrollBehavior,
+                modifier = Modifier.shadow(3.dp)
             )
         },
         contentWindowInsets = WindowInsets(0.dp)
@@ -137,17 +140,41 @@ private fun Material3OverviewContent(
 @Composable
 private fun Material3Theme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
+    val darkSurface = Color(0xFF121212)
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> darkColorScheme()
-        else -> lightColorScheme()
+        darkTheme -> darkColorScheme(
+            surface = darkSurface,
+            onSurface = Color.White,
+            surfaceContainerLowest = darkSurface,
+            surfaceContainerLow = Color(0xFF1E1E1E),
+            surfaceContainer = Color(0xFF252525),
+            surfaceContainerHigh = Color(0xFF2C2C2C),
+            surfaceContainerHighest = Color(0xFF333333),
+            surfaceDim = darkSurface,
+            background = darkSurface,
+            onBackground = Color.White,
+        )
+
+        else -> lightColorScheme(
+            surface = Color.White,
+            onSurface = Color.Black,
+            surfaceContainerLowest = Color.White,
+            surfaceContainerLow = Color.White,
+            surfaceContainer = Color.White,
+            surfaceContainerHigh = Color.White,
+            surfaceContainerHighest = Color.White,
+            surfaceBright = Color.White,
+            background = Color.White,
+            onBackground = Color.Black,
+        )
     }
 
     MaterialTheme(

@@ -11,6 +11,7 @@ import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
 
 fun LazyListScope.bottomAppBarItem() {
@@ -19,7 +20,8 @@ fun LazyListScope.bottomAppBarItem() {
             label = "BottomAppBar"
         ) {
             BottomAppBar(
-                windowInsets = WindowInsets(0.dp)
+                windowInsets = WindowInsets(0.dp),
+                modifier = Modifier.shadow(3.dp)
             ) {
                 IconButton(onClick = { }) {
                     Icon(

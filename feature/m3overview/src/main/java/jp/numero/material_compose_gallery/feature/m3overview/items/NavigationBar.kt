@@ -14,6 +14,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
 
 fun LazyListScope.navigationBarItem() {
@@ -29,7 +31,8 @@ fun LazyListScope.navigationBarItem() {
             )
 
             NavigationBar(
-                windowInsets = WindowInsets(0.dp)
+                windowInsets = WindowInsets(0.dp),
+                modifier = Modifier.shadow(3.dp)
             ) {
                 items.forEachIndexed { index, (label, icon) ->
                     NavigationBarItem(
