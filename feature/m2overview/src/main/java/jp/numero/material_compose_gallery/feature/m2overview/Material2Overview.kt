@@ -1,5 +1,9 @@
 package jp.numero.material_compose_gallery.feature.m2overview
 
+import android.graphics.Color
+import androidx.activity.ComponentActivity
+import androidx.activity.SystemBarStyle
+import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
@@ -19,7 +23,10 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import jp.numero.material_compose_gallery.feature.m2overview.items.bottomAppBarItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.bottomNavigationItem
@@ -39,6 +46,24 @@ import jp.numero.material_compose_gallery.feature.m2overview.items.topAppBarItem
 fun Material2Overview(
     onBack: () -> Unit,
 ) {
+    val context = LocalContext.current
+    SideEffect {
+        (context as? ComponentActivity)?.let {
+            it.enableEdgeToEdge(
+                statusBarStyle = SystemBarStyle.auto(
+                    lightScrim = Color.TRANSPARENT,
+                    darkScrim = Color.TRANSPARENT,
+                    detectDarkMode = { true }
+                )
+            )
+        }
+    }
+    DisposableEffect(Unit) {
+        onDispose {
+            (context as? ComponentActivity)?.enableEdgeToEdge()
+        }
+    }
+
     MaterialTheme {
         Material2Overview(
             onBack = onBack,
