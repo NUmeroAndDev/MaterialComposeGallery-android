@@ -1,7 +1,6 @@
 package jp.numero.material_compose_gallery.feature.home
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -21,10 +20,12 @@ import androidx.hilt.navigation.compose.hiltViewModel
 @Composable
 fun Home(
     navigateToM2Overview: () -> Unit,
+    navigateToM3Overview: () -> Unit,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     Home(
         navigateToM2Overview = navigateToM2Overview,
+        navigateToM3Overview = navigateToM3Overview,
         modifier = Modifier.fillMaxSize()
     )
 }
@@ -33,6 +34,7 @@ fun Home(
 @Composable
 private fun Home(
     navigateToM2Overview: () -> Unit,
+    navigateToM3Overview: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
@@ -57,6 +59,9 @@ private fun Home(
         ) {
             Button(onClick = navigateToM2Overview) {
                 Text(text = "Material 2 Overview")
+            }
+            Button(onClick = navigateToM3Overview) {
+                Text(text = "Material 3 Overview")
             }
         }
     }

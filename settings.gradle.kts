@@ -18,5 +18,6 @@ rootProject.name = "MaterialComposeGallery"
 include(":app")
 include(":feature:home")
 include(":feature:m2overview")
+include(":feature:m3overview")
 include(":data")
 include(":data-impl")

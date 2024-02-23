@@ -55,6 +55,7 @@ dependencies {
     implementation(projects.dataImpl)
     implementation(projects.feature.home)
     implementation(projects.feature.m2overview)
+    implementation(projects.feature.m3overview)
 
     implementation(libs.androidxActivity)
     implementation(libs.androidxCore)
