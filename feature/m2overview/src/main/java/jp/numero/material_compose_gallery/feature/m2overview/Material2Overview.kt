@@ -4,6 +4,7 @@ import android.graphics.Color
 import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
@@ -20,8 +21,10 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
+import androidx.compose.material.darkColors
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.SideEffect
@@ -64,7 +67,7 @@ fun Material2Overview(
         }
     }
 
-    MaterialTheme {
+    Material2Theme {
         Material2Overview(
             onBack = onBack,
             modifier = Modifier,
@@ -131,4 +134,21 @@ private fun Material2OverviewContent(
         topAppBarItem()
         bottomAppBarItem()
     }
+}
+
+@Composable
+private fun Material2Theme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+) {
+    val colors = if (darkTheme) {
+        darkColors()
+    } else {
+        lightColors()
+    }
+
+    MaterialTheme(
+        colors = colors,
+        content = content
+    )
 }

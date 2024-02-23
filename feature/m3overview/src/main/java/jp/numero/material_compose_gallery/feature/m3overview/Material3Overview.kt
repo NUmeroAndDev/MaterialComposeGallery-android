@@ -1,5 +1,7 @@
 package jp.numero.material_compose_gallery.feature.m3overview
 
+import android.os.Build
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
@@ -20,12 +22,16 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.dynamicDarkColorScheme
+import androidx.compose.material3.dynamicLightColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import jp.numero.material_compose_gallery.feature.m3overview.items.bottomAppBarItem
-import jp.numero.material_compose_gallery.feature.m3overview.items.navigationBarItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.buttonItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.cardItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.checkboxItem
@@ -33,6 +39,7 @@ import jp.numero.material_compose_gallery.feature.m3overview.items.chipsItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.dialogItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.dividerItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.floatingActionButtonItem
+import jp.numero.material_compose_gallery.feature.m3overview.items.navigationBarItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.progressIndicatorItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.sliderItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.switchItem
@@ -42,7 +49,7 @@ import jp.numero.material_compose_gallery.feature.m3overview.items.topAppBarItem
 fun Material3Overview(
     onBack: () -> Unit,
 ) {
-    MaterialTheme {
+    Material3Theme {
         Material3Overview(
             onBack = onBack,
             modifier = Modifier,
@@ -112,4 +119,26 @@ private fun Material3OverviewContent(
         switchItem()
         topAppBarItem()
     }
+}
+
+@Composable
+private fun Material3Theme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    dynamicColor: Boolean = true,
+    content: @Composable () -> Unit
+) {
+    val colorScheme = when {
+        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+            val context = LocalContext.current
+            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+        }
+
+        darkTheme -> darkColorScheme()
+        else -> lightColorScheme()
+    }
+
+    MaterialTheme(
+        colorScheme = colorScheme,
+        content = content
+    )
 }
