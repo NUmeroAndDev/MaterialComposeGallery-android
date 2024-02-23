@@ -82,7 +82,8 @@ private fun Material3Overview(
                 windowInsets = WindowInsets.safeDrawing.only(WindowInsetsSides.Top),
                 scrollBehavior = scrollBehavior
             )
-        }
+        },
+        contentWindowInsets = WindowInsets(0.dp)
     ) {
         Material3OverviewContent(
             modifier = Modifier
