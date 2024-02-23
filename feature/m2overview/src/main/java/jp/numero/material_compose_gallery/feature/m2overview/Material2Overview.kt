@@ -120,6 +120,7 @@ private fun Material2OverviewContent(
             .add(WindowInsets(top = 16.dp, bottom = 16.dp))
             .asPaddingValues()
     ) {
+        bottomAppBarItem()
         bottomNavigationItem()
         buttonsItem()
         cardItem()
@@ -132,7 +133,6 @@ private fun Material2OverviewContent(
         sliderItem()
         switchItem()
         topAppBarItem()
-        bottomAppBarItem()
     }
 }
 
