@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     color = androidx.compose.ui.graphics.Color.Black
                 ) {
-                    TemplateAppNavigation(
+                    MaterialComposeGalleryAppNavigation(
                         navController = navController,
                         windowSizeClass = windowSizeClass,
                     )

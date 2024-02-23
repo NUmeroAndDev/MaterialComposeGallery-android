@@ -12,7 +12,7 @@ import jp.numero.material_compose_gallery.feature.m3overview.m3OverviewScreen
 import jp.numero.material_compose_gallery.feature.m3overview.navigateToM3Overview
 
 @Composable
-fun TemplateAppNavigation(
+fun MaterialComposeGalleryAppNavigation(
     navController: NavHostController,
     windowSizeClass: WindowSizeClass,
 ) {
