@@ -41,6 +41,7 @@ import jp.numero.material_compose_gallery.feature.m3overview.items.dividerItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.floatingActionButtonItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.menuItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.navigationBarItem
+import jp.numero.material_compose_gallery.feature.m3overview.items.navigationRailItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.progressIndicatorItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.segmentedButtonItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.sliderItem
@@ -119,6 +120,7 @@ private fun Material3OverviewContent(
         floatingActionButtonItem()
         menuItem()
         navigationBarItem()
+        navigationRailItem()
         progressIndicatorItem()
         segmentedButtonItem()
         sliderItem()
