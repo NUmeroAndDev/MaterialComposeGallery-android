@@ -43,6 +43,7 @@ import jp.numero.material_compose_gallery.feature.m2overview.items.floatingActio
 import jp.numero.material_compose_gallery.feature.m2overview.items.menuItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.navigationRailItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.progressIndicatorItem
+import jp.numero.material_compose_gallery.feature.m2overview.items.pullRefreshItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.sliderItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.switchItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.tabItem
@@ -136,6 +137,7 @@ private fun Material2OverviewContent(
         menuItem()
         navigationRailItem()
         progressIndicatorItem()
+        pullRefreshItem()
         sliderItem()
         switchItem()
         tabItem()

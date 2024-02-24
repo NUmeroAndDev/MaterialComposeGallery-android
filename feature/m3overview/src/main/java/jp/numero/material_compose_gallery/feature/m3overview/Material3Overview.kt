@@ -43,6 +43,7 @@ import jp.numero.material_compose_gallery.feature.m3overview.items.menuItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.navigationBarItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.navigationRailItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.progressIndicatorItem
+import jp.numero.material_compose_gallery.feature.m3overview.items.pullToRefreshItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.segmentedButtonItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.sliderItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.switchItem
@@ -123,6 +124,7 @@ private fun Material3OverviewContent(
         navigationBarItem()
         navigationRailItem()
         progressIndicatorItem()
+        pullToRefreshItem()
         segmentedButtonItem()
         sliderItem()
         switchItem()
