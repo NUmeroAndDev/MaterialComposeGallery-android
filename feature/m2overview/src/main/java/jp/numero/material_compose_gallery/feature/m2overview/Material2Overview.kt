@@ -40,6 +40,7 @@ import jp.numero.material_compose_gallery.feature.m2overview.items.chipsItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.dialogItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.dividerItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.floatingActionButtonItem
+import jp.numero.material_compose_gallery.feature.m2overview.items.menuItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.progressIndicatorItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.sliderItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.switchItem
@@ -129,6 +130,7 @@ private fun Material2OverviewContent(
         dialogItem()
         dividerItem()
         floatingActionButtonItem()
+        menuItem()
         progressIndicatorItem()
         sliderItem()
         switchItem()

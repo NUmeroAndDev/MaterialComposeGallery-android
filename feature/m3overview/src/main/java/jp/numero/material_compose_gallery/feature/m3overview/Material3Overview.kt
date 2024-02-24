@@ -39,6 +39,7 @@ import jp.numero.material_compose_gallery.feature.m3overview.items.chipsItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.dialogItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.dividerItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.floatingActionButtonItem
+import jp.numero.material_compose_gallery.feature.m3overview.items.menuItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.navigationBarItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.progressIndicatorItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.sliderItem
@@ -114,6 +115,7 @@ private fun Material3OverviewContent(
         dialogItem()
         dividerItem()
         floatingActionButtonItem()
+        menuItem()
         navigationBarItem()
         progressIndicatorItem()
         sliderItem()
