@@ -44,6 +44,7 @@ import jp.numero.material_compose_gallery.feature.m2overview.items.menuItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.progressIndicatorItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.sliderItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.switchItem
+import jp.numero.material_compose_gallery.feature.m2overview.items.tabItem
 import jp.numero.material_compose_gallery.feature.m2overview.items.topAppBarItem
 
 @Composable
@@ -134,6 +135,7 @@ private fun Material2OverviewContent(
         progressIndicatorItem()
         sliderItem()
         switchItem()
+        tabItem()
         topAppBarItem()
     }
 }

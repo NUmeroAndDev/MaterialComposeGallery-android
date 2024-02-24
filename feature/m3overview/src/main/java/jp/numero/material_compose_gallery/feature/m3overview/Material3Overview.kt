@@ -45,6 +45,7 @@ import jp.numero.material_compose_gallery.feature.m3overview.items.progressIndic
 import jp.numero.material_compose_gallery.feature.m3overview.items.segmentedButtonItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.sliderItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.switchItem
+import jp.numero.material_compose_gallery.feature.m3overview.items.tabItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.topAppBarItem
 
 @Composable
@@ -122,6 +123,7 @@ private fun Material3OverviewContent(
         segmentedButtonItem()
         sliderItem()
         switchItem()
+        tabItem()
         topAppBarItem()
     }
 }
