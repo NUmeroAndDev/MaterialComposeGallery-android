@@ -47,6 +47,7 @@ import jp.numero.material_compose_gallery.feature.m3overview.items.segmentedButt
 import jp.numero.material_compose_gallery.feature.m3overview.items.sliderItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.switchItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.tabItem
+import jp.numero.material_compose_gallery.feature.m3overview.items.textFieldItem
 import jp.numero.material_compose_gallery.feature.m3overview.items.topAppBarItem
 
 @Composable
@@ -126,6 +127,7 @@ private fun Material3OverviewContent(
         sliderItem()
         switchItem()
         tabItem()
+        textFieldItem()
         topAppBarItem()
     }
 }
