@@ -32,7 +32,7 @@ fun LazyListScope.chipsItem() {
             label = "Chip",
         ) {
             FlowRow(
-                horizontalArrangement = Arrangement.SpaceBetween,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
