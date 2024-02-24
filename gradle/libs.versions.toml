@@ -38,7 +38,7 @@ androidxComposeMaterial3WindowSizeClass = { module = "androidx.compose.material3
 androidxComposeMaterialIconsExtended = { module = "androidx.compose.material:material-icons-extended", version.ref = "compose" }
 androidxComposeUiTest = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "compose" }
 
-coil = "io.coil-kt:coil-compose:2.5.0"
+coil = "io.coil-kt:coil-compose:2.6.0"
 
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
