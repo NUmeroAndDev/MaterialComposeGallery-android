@@ -4,9 +4,9 @@ kotlin = "1.9.22"
 ksp = "1.9.22-1.0.17"
 
 lifecycle = "2.7.0"
-compose = "1.6.2"
+compose = "1.7.0-SNAPSHOT"
 composeCompiler = "1.5.10"
-material3 = "1.2.0"
+material3 = "1.3.0-SNAPSHOT"
 
 hilt = "2.50"
 

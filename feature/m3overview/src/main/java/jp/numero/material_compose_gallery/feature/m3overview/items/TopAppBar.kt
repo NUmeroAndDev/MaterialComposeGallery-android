@@ -36,9 +36,7 @@ fun LazyListScope.topAppBarItem() {
                     // TODO: Menu
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceColorAtElevation(
-                        elevation = 3.dp
-                    )
+                    containerColor = MaterialTheme.colorScheme.surfaceContainer
                 ),
                 windowInsets = WindowInsets(0.dp)
             )
