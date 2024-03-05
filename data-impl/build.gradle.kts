@@ -10,5 +10,4 @@ android {
 
 dependencies {
     implementation(projects.data)
-    implementation(libs.okhttp3)
 }

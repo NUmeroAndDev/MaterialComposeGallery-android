@@ -37,8 +37,6 @@ class ComposePlugin : Plugin<Project> {
                 implementation(libs.findLibrary("androidxNavigationCompose"))
                 implementation(libs.findLibrary("androidxLifecycleViewModel"))
                 implementation(libs.findLibrary("androidxHiltNavigationCompose"))
-
-                implementation(libs.findLibrary("coil"))
             }
         }
     }
