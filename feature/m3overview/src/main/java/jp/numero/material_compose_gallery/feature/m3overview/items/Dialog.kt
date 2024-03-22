@@ -51,7 +51,7 @@ fun LazyListScope.dialogItem() {
                         ) {
                             Text("Dismiss")
                         }
-                    }
+                    },
                 )
             }
         }
