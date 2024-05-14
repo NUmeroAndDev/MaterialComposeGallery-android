@@ -3,7 +3,7 @@ package jp.numero.material_compose_gallery.feature.m3overview.items
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.pulltorefresh.PullToRefreshContainer
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
@@ -17,11 +17,14 @@ fun LazyListScope.pullToRefreshItem() {
         ) {
             val state = rememberPullToRefreshState()
             LaunchedEffect(state) {
-                state.startRefresh()
+                state.animateToThreshold()
             }
-            PullToRefreshContainer(
+            PullToRefreshBox(
+                isRefreshing = true,
+                onRefresh = {},
                 state = state,
-            )
+            ) {
+            }
         }
     }
 }
