@@ -6,10 +6,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.unit.dp
 
 fun LazyListScope.cardItem() {
@@ -26,6 +28,7 @@ fun LazyListScope.cardItem() {
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
+                        .shadow(1.dp, shape = CardDefaults.shape)
                 ) {
                     Text(
                         text = "Card",
