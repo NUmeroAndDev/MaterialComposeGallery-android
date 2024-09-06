@@ -8,7 +8,7 @@ compose = "1.7.0-beta01"
 composeCompiler = "1.5.14"
 material3 = "1.3.0-beta01"
 
-hilt = "2.51.1"
+hilt = "2.52"
 
 junit = "4.13.2"
 androidx-test-ext-junit = "1.1.5"
