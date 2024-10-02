@@ -24,7 +24,7 @@ androidxNavigationCompose = "androidx.navigation:navigation-compose:2.7.7"
 androidxLifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
 androidxLifecycleViewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 androidxHiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:1.2.0"
-androidxProfileInstaller = "androidx.profileinstaller:profileinstaller:1.3.1"
+androidxProfileInstaller = "androidx.profileinstaller:profileinstaller:1.4.1"
 
 androidxComposeUi = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 androidxComposeUiTooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
